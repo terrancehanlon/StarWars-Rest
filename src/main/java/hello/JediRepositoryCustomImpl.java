@@ -41,7 +41,7 @@ public class JediRepositoryCustomImpl implements JediRepositoryCustom{
 	    @Override
 	    public String saveJedi(@RequestBody Jedi jedi) {
 	    	Query query = entityManager.createQuery(
-	    			"insert into Jedi (id, affiliations, name, species) values(?1, ?2, ?3, ?4");
+	    			"insert into Jedi (id, name, species) values(?1, ?2, ?3, ?4");
 	    	return "saved";
 	    }
 	    

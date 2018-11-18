@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.awt.X11.XConstants;
+
 
 import java.util.Optional;
 import java.util.HashMap;
@@ -42,6 +42,13 @@ public class JediController {
     private void updateAffiliationTable(String jediName) {
     	
     }
+    
+    @GetMapping(path="/error")
+	public String error() {
+    	System.err.println("in error");
+		return "Error Page";
+	}
+	
 
     @GetMapping(path="/{id}")
     public @ResponseBody Optional<Jedi> getJediById(@PathVariable String id){
@@ -50,6 +57,13 @@ public class JediController {
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Jedi> getAllJedi(){
+    	System.out.println("Finding all *******(*(*(*(*(*");
+        return jediRepo.findAll();
+    }
+    
+    @GetMapping(path="/fetch")
+    public @ResponseBody Iterable<Jedi> getFetchJedi(){
+    	System.out.println("Finding all *******(*(*(*(*(*");
         return jediRepo.findAll();
     }
     
