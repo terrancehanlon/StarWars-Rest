@@ -11,4 +11,5 @@ mvnw.cmd
 gradle
 src/main/resources
 target/classes
+build/
 .classpath
