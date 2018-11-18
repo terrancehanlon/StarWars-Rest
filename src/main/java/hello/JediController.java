@@ -54,12 +54,8 @@ public class JediController {
     }
     
  
-
     @GetMapping(path="/species/{specie}", produces="application/json")
     public @ResponseBody List<Jedi> getJediBySpecie(@PathVariable String specie){
-        System.out.println(specie);
-        System.out.println("*********");
-        System.out.println("in controller: " + jediRepo	.getJediBySpecie(specie));
        return jediRepo.getJediBySpecie(specie);
     }
     

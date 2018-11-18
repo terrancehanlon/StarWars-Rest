@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Repository
 public interface JediRepositoryCustom {
 	
-//	public static final String find_species = "SELECT * FROM jedi WHERE specie=dog";
-//	@Query("SELECT * FROM jedi WHERE species=:specie")
 	public List<Jedi> getJediBySpecie(String specie);	
 	
 	public List<Jedi> getJediByName(String name);

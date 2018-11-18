@@ -26,12 +26,7 @@ public class JediRepositoryCustomImpl implements JediRepositoryCustom{
 	    public List<Jedi> getJediBySpecie(String specie) {
 	        Query query = entityManager.createQuery("select name, id from Jedi WHERE species = ?1");
 	        query.setParameter(1, specie);
-//	        System.out.println('');
-	        System.out.println("Query: " + query.toString());
-	        System.out.println("get list:  " + (query.getResultList()));
 	        List<Jedi> res = query.getResultList();
-	        System.out.println("RES: " + res);
-	        System.out.println(res.toString());
 	        return res;
 	    }
 	    @Override
@@ -47,7 +42,6 @@ public class JediRepositoryCustomImpl implements JediRepositoryCustom{
 	    public String saveJedi(@RequestBody Jedi jedi) {
 	    	Query query = entityManager.createQuery(
 	    			"insert into Jedi (id, affiliations, name, species) values(?1, ?2, ?3, ?4");
-	    	
 	    	return "saved";
 	    }
 	    
