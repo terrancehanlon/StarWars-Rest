@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -41,11 +42,18 @@ public class SithController {
 		return sithRepo.findAll();
 	}
 	
+	@GetMapping(path="/{id}")
+	public @ResponseBody Optional<Sith> getSithById(@PathVariable String id){
+		System.err.println("in id");
+		return sithRepo.findById(id);
+	}
+	
 	@GetMapping(path="/species/{specie}")
 	public @ResponseBody List<Sith> getSithBySpecie(String specie){
 		return sithRepo.getSithBySpecie(specie);
 	}
 	
+	//todo fix search with spaces
 	@GetMapping(path="/name/{name}")
 	public @ResponseBody List<Sith> getSithByName(String name){
 		return sithRepo.getSithByName(name);
