@@ -1,4 +1,4 @@
-package hello;
+package hello.Sith;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,12 +36,12 @@ public class SithRepositoryCustomImpl implements SithRepositoryCustom {
 	}
 	
 	@Override
-	public String saveJedi(@RequestBody Sith sith) {
+	public String saveSith(@RequestBody Sith sith) {
 		return "saved";
 	}
 	
 	//todo when front end is implemented ? 
-	public void updateJediAffiliationTable(String name) {
+	public void updateSithAffiliationTable(String name) {
 		
 	}
 	

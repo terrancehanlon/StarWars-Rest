@@ -1,4 +1,4 @@
-package hello;
+package hello.Jedi;
 
 import java.util.HashMap;
 import java.util.List;

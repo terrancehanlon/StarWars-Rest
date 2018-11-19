@@ -1,4 +1,4 @@
-package hello;
+package hello.Sith;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ public interface SithRepositoryCustom {
 	
 	public List<Sith> getSithByName(String name);
 	
-	public String saveJedi(@RequestBody Sith sith);
+	public String saveSith(@RequestBody Sith sith);
 	
-	public void updateJediAffiliationTable(String sithName);
+	public void updateSithAffiliationTable(String sithName);
 	
 }

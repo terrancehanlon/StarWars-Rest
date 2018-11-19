@@ -1,4 +1,4 @@
-package hello;
+package hello.Jedi;
 
 
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -16,8 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import hello.JediRepository;
 import hello.Tools;
+import hello.Jedi.JediRepository;
 
 @Controller
 @RequestMapping(path="/jedi") // This means URL's start with /demo (after Application path)
@@ -57,7 +57,7 @@ public class JediController {
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Jedi> getAllJedi(){
-    	System.out.println("Finding all *******(*(*(*(*(*");
+    	System.out.println("Finding all");
         return jediRepo.findAll();
     }
     

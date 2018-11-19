@@ -1,4 +1,4 @@
-package hello;
+package hello.Jedi;
 
 
 import javax.persistence.Entity;
